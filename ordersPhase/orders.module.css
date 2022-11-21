@@ -1,0 +1,49 @@
+body{
+    behavior: url(orders.jsx);
+}
+table,th,td{
+    border-bottom: 1px solid #394f65;
+    align-items: center;
+}
+.lorder{
+    height: 400px;
+    padding-left: 39px;
+    background-color: #394f66;
+    text-align: center;
+    margin-left: 12%;
+    margin-right: 11.6%;
+    margin-top: 50px;
+    color: white;
+    overflow-y: scroll;
+}
+table{
+    margin-left: 14px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    background-color: #567083;
+    
+    
+}
+.lorder th,td{
+    padding-right: 25px;
+   padding-left: 25px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+    
+}
+th{
+    font-size: 13px;
+    background-color: #455e71;
+    border: #567083;
+}
+#paragraph{
+    font-weight: 605;
+  margin-right: 89%;
+    padding: 20px;
+}
+td li{
+   color: rgb(96, 242, 92);
+}
+li span{
+    color: white;
+}
