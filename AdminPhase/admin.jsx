@@ -2,10 +2,35 @@ import React from "react";
 import { IconBase } from "react-icons";
 import {useNavigate} from 'react-router-dom'
 import style from './admin.module.css'
+import { useEffect, useState } from "react";
 import { AiOutlineDashboard,AiOutlineFileDone,AiOutlineShoppingCart,AiOutlineUser,AiOutlineSetting } from 'react-icons/ai';
 function Admin(){
     const navigate=useNavigate()
-    
+    const [username, setUsername] = useState("");
+    const [password, setpassword] = useState("");
+  
+    const [show, setShow] = useState(false);
+    const errMsg = <p className={style.err}>UserName and password should be same</p>;
+  
+    const usernameHandler = (e) => {
+      setUsername(e.target.value);
+      setShow(false);
+    };
+  
+    const passwordHandler = (e) => {
+      setpassword(e.target.value);
+      setShow(false);
+    };
+    const loginHandler = () => {
+      if (username === password && username !== "" && password !== "") {
+        setShow(false);
+        localStorage.setItem("loginStatus", true);
+        navigate("/index");
+        console.log("login");
+      } else {
+        setShow(true);
+      }
+    };
     return(
      <div id={style.main1}>
           <div id={style.main}>
